@@ -46,7 +46,7 @@ class App extends Component {
 
   authentication(email, password) {
     axios
-      .post("https://sheltered-peak-36785.herokuapp.com/login", {
+      .post("http://localhost:3000/login", {
         email: email,
         password: password
       })

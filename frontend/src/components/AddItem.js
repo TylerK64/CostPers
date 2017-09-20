@@ -34,15 +34,10 @@ class AddItem extends Component {
   insertItem = () => {
     var thisItem = this;
     axios
-      .post(
-        "https://sheltered-peak-36785.herokuapp.com/users/" +
-          this.state.userId +
-          "/items",
-        {
-          name: this.state.name,
-          price: this.state.price
-        }
-      )
+      .post("http://localhost:3000/users/" + this.state.userId + "/items", {
+        name: this.state.name,
+        price: this.state.price
+      })
       .then(() => {
         Actions.itemsList({
           userId: this.state.userId
