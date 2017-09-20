@@ -1,3 +1,4 @@
+# previous/original SessionsController
 class SessionsController < ApplicationController
   protect_from_forgery with: :null_session
 
