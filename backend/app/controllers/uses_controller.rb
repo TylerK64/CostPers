@@ -22,5 +22,4 @@ class UsesController < ApplicationController
     render json: @costper
   end
 
-
 end
