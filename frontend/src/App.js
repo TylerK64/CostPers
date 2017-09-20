@@ -28,6 +28,7 @@ class App extends Component {
       firstName: "",
       lastName: "",
       itemId: "",
+      token: "",
       auth: false,
       data: []
     };
@@ -55,6 +56,7 @@ class App extends Component {
           userId: response.data.user_id,
           firstName: response.data.first_name,
           lastName: response.data.last_name,
+          token: response.data.token,
           loading: false,
           auth: true
         });
