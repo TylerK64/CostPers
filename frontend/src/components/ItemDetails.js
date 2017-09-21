@@ -94,7 +94,7 @@ class ItemDetails extends Component {
 const styles = {
   container: {
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "space-around"
   },
   itemNameContainer: {
     justifyContent: "center",
@@ -117,6 +117,7 @@ const styles = {
   timesUsedContainer: {
     flexDirection: "row",
     marginTop: 40,
+    marginBottom: 7,
     width: 320,
     height: 40
   },
@@ -138,7 +139,7 @@ const styles = {
   },
   priceContainer: {
     flexDirection: "row",
-    marginTop: 1,
+    marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
     width: 320,
