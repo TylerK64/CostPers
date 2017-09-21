@@ -1,4 +1,6 @@
-class UsesController < ApplicationController
+class UsesController < ApiController
+  before_action :require_login
+
   def index
     # @item = Item.find_by(params[:id])
     # @uses = @item.uses
@@ -19,6 +21,5 @@ class UsesController < ApplicationController
     @costper = (@item.price / @uses).round(2)
     render json: @costper
   end
-
 
 end

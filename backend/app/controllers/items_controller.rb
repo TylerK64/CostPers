@@ -1,4 +1,8 @@
-class ItemsController < ApplicationController
+class ItemsController < ApiController
+  before_action :require_login
+  # skip_before_action :verify_authenticity_token, only: [:index, :show], raise: false
+  # Can uncomment previous line if sending json data for get requests is desired; removes auth token requirement
+
   def index
     @user = User.find_by(id: params[:user_id])
     if @user == nil
