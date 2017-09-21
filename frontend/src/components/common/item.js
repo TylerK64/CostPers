@@ -18,8 +18,7 @@ class Item extends Component {
 
   render() {
     return (
-        <View style={styles.itemNameContainer}
-        >
+        <View style={styles.itemNameContainer}>
           <Text
             style={styles.itemNameDisplay}
             onPress={() =>

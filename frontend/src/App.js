@@ -121,7 +121,8 @@ class App extends Component {
             onBack={() =>
               Actions.itemsList({
                 userId: this.state.userId,
-                star: this.state.star
+                star: this.state.star,
+                token: this.state.token
               })}
           />
         </Scene>
