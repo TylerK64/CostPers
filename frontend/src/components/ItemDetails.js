@@ -94,7 +94,7 @@ class ItemDetails extends Component {
 const styles = {
   container: {
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "space-evenly",
   },
   itemNameContainer: {
     justifyContent: "center",
