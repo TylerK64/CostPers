@@ -11,7 +11,8 @@ class Item extends Component {
     this.state = {
       userId: user_id,
       itemId: item_id,
-      star: star
+      star: star,
+      token: this.props.token
     };
   }
 
@@ -25,7 +26,8 @@ class Item extends Component {
             Actions.itemDetails(
               { userId: this.state.userId,
                 itemId: this.state.itemId,
-                star: this.state.star
+                star: this.state.star,
+                token: this.state.token
                }
               )}
           >

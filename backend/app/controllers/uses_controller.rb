@@ -1,4 +1,4 @@
-class UsesController < ApplicationController
+class UsesController < ApiController
   before_action :require_login
 
   def index
