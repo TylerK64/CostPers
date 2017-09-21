@@ -20,17 +20,19 @@ class ItemDetails extends Component {
       uses: "",
       price: "",
       costPer: "",
-      star: star
+      star: star,
+      token: this.props.token
     };
   }
 
   componentWillMount() {
     axios
       .get(
-        "http://10.0.0.228:3000/users/" +
-          this.state.userId +
-          "/items/" +
-          this.state.itemId
+        "http://10.0.0.228:3000/users/" + this.state.userId + "/items/" + this.state.itemId, {
+          params: {
+            token: this.state.token
+          }
+        }
       )
       .then(response => {
         this.setState({
@@ -81,6 +83,7 @@ class ItemDetails extends Component {
             userId={this.state.userId}
             itemId={this.state.itemId}
             star={this.state.star}
+            token={this.state.token}
           />
         </Card>
       </View>

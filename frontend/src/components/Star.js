@@ -15,7 +15,8 @@ class Star extends Component {
       userId: userId,
       itemId: itemId,
       itemName: "",
-      star: star
+      star: star,
+      token: this.props.token
     };
 
     this.updateStar = this.updateStar.bind(this);
@@ -24,12 +25,10 @@ class Star extends Component {
   updateStar() {
     axios
       .patch(
-        "http://10.0.0.228:3000/users/" +
-          this.state.userId +
-          "/items/" +
-          this.state.itemId,
+        "http://10.0.0.228:3000/users/" + this.state.userId + "/items/" + this.state.itemId,
         {
-          star: this.state.star
+          star: this.state.star,
+          token: this.state.token
         }
       )
       .then(response => {

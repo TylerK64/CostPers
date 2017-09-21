@@ -86,12 +86,14 @@ class ItemsList extends Component {
                         user_id={item.user_id}
                         item_id={item.id}
                         category_id={item.category_id}
+                        token={this.state.token}
                       />
 
                       <Costper
                         key={item.costper.cpid}
                         costper={item.costper.costper}
                         item_id={item.costper.item_id}
+                        token={this.state.token}
                         updateItem={this.updateItemFunc(index)}
                       />
                     </View>
@@ -115,11 +117,13 @@ class ItemsList extends Component {
                         user_id={item.user_id}
                         item_id={item.id}
                         category_id={item.category_id}
+                        token={this.state.token}
                       />
                       <Costper
                         key={item.costper.cpid}
                         costper={item.costper.costper}
                         item_id={item.costper.item_id}
+                        token={this.state.token}
                         updateItem={this.updateItemFunc(index)}
                       />
                     </View>

@@ -42,7 +42,8 @@ class AddItem extends Component {
       })
       .then(() => {
         Actions.itemsList({
-          userId: this.state.userId
+          userId: this.state.userId,
+          token: this.state.token
         });
       })
       .catch(() =>
