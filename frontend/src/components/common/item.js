@@ -11,21 +11,22 @@ class Item extends Component {
     this.state = {
       userId: user_id,
       itemId: item_id,
-      star: star
+      star: star,
+      token: this.props.token
     };
   }
 
   render() {
     return (
-        <View style={styles.itemNameContainer}
-        >
+        <View style={styles.itemNameContainer}>
           <Text
             style={styles.itemNameDisplay}
             onPress={() =>
             Actions.itemDetails(
               { userId: this.state.userId,
                 itemId: this.state.itemId,
-                star: this.state.star
+                star: this.state.star,
+                token: this.state.token
                }
               )}
           >

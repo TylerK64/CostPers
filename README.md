@@ -5,7 +5,7 @@ Watch this short demo video to see the CostPers app in action:
 
 [![alt text](https://raw.githubusercontent.com/icedcoffeeallday/CostPers/master/CostPers_on_YouTube.png)](https://www.youtube.com/watch?v=fcuIzBc5JEg&feature=youtu.be)
 
-
+        
 ## Team Members
 Andrea Scott ([@icedcoffeeallday](http://github.com/icedcoffeeallday))
 

@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     resources :uses
   end
 
-
-
   resources :catergories
   resources :uses
   resources :users do

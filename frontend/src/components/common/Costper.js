@@ -9,15 +9,18 @@ import axios from 'axios';
 class Costper extends Component {
   constructor(props) {
     super(props)
-
-    this.state = { costper: this.props.costper}
+    this.state = {
+      costper: this.props.costper,
+      token: this.props.token
+    }
     // this.addUse = this.addUse.bind(this)
   }
 
 addUse(arg) {
   var myCostper = this
-    axios.post("https://sheltered-peak-36785.herokuapp.com/items/"+arg+"/uses", {
-      item_id: arg
+    axios.post("http://10.0.0.228:3000/items/"+arg+"/uses", {
+      item_id: arg,
+      token: this.state.token
     })
     .then(function(response) {
       myCostper.setState({costper: response.data})
