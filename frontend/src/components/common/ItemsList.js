@@ -20,7 +20,8 @@ class ItemsList extends Component {
     this.state = {
       starred: [],
       non_starred: [],
-      user_id: this.props.userId
+      user_id: this.props.userId,
+      token: this.props.token
     };
     this.updateItemFunc = this.updateItemFunc.bind(this);
   }
@@ -28,7 +29,11 @@ class ItemsList extends Component {
   componentWillMount() {
     var myItem = this;
     axios
-      .get("http://localhost:3000/users/" + this.state.user_id + "/items")
+      .get("http://10.0.0.228:3000/users/" + this.state.user_id + "/items", {
+        params: {
+          token: this.state.token
+        }
+      })
       .then(function(response) {
         console.log(response);
         myItem.setState({
@@ -126,7 +131,7 @@ class ItemsList extends Component {
         </ScrollView>
         <View style={styles.footerStyle}>
           <TouchableOpacity
-            onPress={() => Actions.addItem({ userId: this.state.user_id })}
+            onPress={() => Actions.addItem({ userId: this.state.user_id, token: this.state.token })}
           >
             <View style={styles.footerSubGroup}>
               <Icon size={40} style={{ color: "white" }} name="add-circle" />

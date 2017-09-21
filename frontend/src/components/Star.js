@@ -24,7 +24,7 @@ class Star extends Component {
   updateStar() {
     axios
       .patch(
-        "http://localhost:3000/users/" +
+        "http://10.0.0.228:3000/users/" +
           this.state.userId +
           "/items/" +
           this.state.itemId,

@@ -47,11 +47,12 @@ class App extends Component {
 
   authentication(email, password) {
     axios
-      .post("http://localhost:3000/login", {
+      .post('http://10.0.0.228:3000/login', {
         email: email,
         password: password
       })
       .then(response => {
+        console.log(response);
         this.setState({
           userId: response.data.user_id,
           firstName: response.data.first_name,
@@ -62,14 +63,18 @@ class App extends Component {
         });
 
         Actions.itemsList({
-          userId: this.state.userId
+          userId: this.state.userId,
+          token: this.state.token
         });
       })
-      .catch(() =>
+      .catch((response) => {
+        console.log('login request failed');
+        console.log(response);
         this.setState({
           error: "Login failed, please try again.",
           loading: false
         })
+      }
       );
   }
 

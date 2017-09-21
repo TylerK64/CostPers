@@ -17,6 +17,7 @@ class AddItem extends Component {
       name: "",
       price: "",
       star: "",
+      token: this.props.token,
       data: [],
       error: ""
     };
@@ -34,9 +35,10 @@ class AddItem extends Component {
   insertItem = () => {
     var thisItem = this;
     axios
-      .post("http://localhost:3000/users/" + this.state.userId + "/items", {
+      .post("http://10.0.0.228:3000/users/" + this.state.userId + "/items", {
         name: this.state.name,
-        price: this.state.price
+        price: this.state.price,
+        token: this.state.token
       })
       .then(() => {
         Actions.itemsList({

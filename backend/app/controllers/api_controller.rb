@@ -17,8 +17,10 @@ class ApiController < ActionController::Base
   private
 
   def authenticate_token
-    authenticate_with_http_token do |token, options|
-      User.find_by(token: token)
-    end
+    p params
+    User.find_by(token: params[:token])
+    # authenticate_with_http_token do |token, options|
+    #   User.find_by(token: token)
+    # end
   end
 end
